@@ -1,0 +1,68 @@
+{
+  "type": "record",
+  "name": "UserChangeAvro",
+  "namespace": "com.reddlyne.commons.model.avro",
+  "fields": [
+    {
+      "name": "userID",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "userName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "fullName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "isVerified",
+      "type": [
+        "null",
+        "boolean"
+      ],
+      "default": null
+    },
+    {
+      "name": "operation",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "UserOperationAvro",
+          "symbols": [
+            "CREATE",
+            "UPDATE",
+            "DELETE",
+            "FREEZE",
+            "UNFREEZE"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "updateAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "local-timestamp-millis"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

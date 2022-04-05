@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "PostReactionChangeAvro",
+  "namespace": "com.reddlyne.commons.model.avro",
+  "fields": [
+    {
+      "name": "postID",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "likeCount",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "dislikeCount",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "retweetCount",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "commentCount",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    }
+  ]
+}

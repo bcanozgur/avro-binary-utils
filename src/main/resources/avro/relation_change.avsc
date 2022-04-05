@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "RelationChangeAvro",
+  "namespace": "com.reddlyne.commons.model.avro",
+  "fields": [
+    {
+      "name": "sourceId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "targetId",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "relation",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "RelationAvro",
+          "symbols": [
+            "MUTED",
+            "FOLLOWS",
+            "BLOCKED"
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "deleted",
+      "type": [
+        "null",
+        "boolean"
+      ],
+      "default": null
+    }
+  ]
+}

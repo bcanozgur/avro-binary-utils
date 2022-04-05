@@ -1,0 +1,255 @@
+{
+  "type": "record",
+  "name": "TimelineHomeRelatedAvro",
+  "namespace": "com.reddlyne.commons.model.avro",
+  "fields": [
+    {
+      "type": "string",
+      "name": "timelineUserID"
+    },
+    {
+      "name": "relationChange",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "RelationChangeAvro",
+          "fields": [
+            {
+              "name": "sourceId",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "targetId",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "relation",
+              "type": [
+                "null",
+                {
+                  "type": "enum",
+                  "name": "RelationAvro",
+                  "symbols": [
+                    "MUTED",
+                    "FOLLOWS",
+                    "BLOCKED"
+                  ]
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "deleted",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default":null
+    },
+    {
+      "name": "fanoutPostChange",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "PostChangeAvro",
+          "fields": [
+            {
+              "name": "userID",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "postID",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "postedAt",
+              "type": [
+                "null",
+                {
+                  "type": "long",
+                  "logicalType": "local-timestamp-millis"
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "operation",
+              "type": [
+                "null",
+                {
+                  "type": "enum",
+                  "name": "OperationAvro",
+                  "symbols": [
+                    "CREATE",
+                    "UPDATE",
+                    "DELETE"
+                  ]
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "hashtag",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "name": "hashtag",
+                  "items": "string",
+                  "avro.java.string": "String"
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "content",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "hasImage",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            },
+            {
+              "name": "hasVideo",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            },
+            {
+              "name": "lat",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            },
+            {
+              "name": "lon",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            },
+            {
+              "name": "category",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default":null
+    },
+    {
+      "name": "userChangeAvro",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "UserChangeAvro",
+          "fields": [
+            {
+              "name": "userID",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "userName",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "fullName",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "isVerified",
+              "type": [
+                "null",
+                "boolean"
+              ],
+              "default": null
+            },
+            {
+              "name": "operation",
+              "type": [
+                "null",
+                {
+                  "type": "enum",
+                  "name": "UserOperationAvro",
+                  "symbols": [
+                    "CREATE",
+                    "UPDATE",
+                    "DELETE",
+                    "FREEZE",
+                    "UNFREEZE"
+                  ]
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "updateAt",
+              "type": [
+                "null",
+                {
+                  "type": "long",
+                  "logicalType": "local-timestamp-millis"
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
