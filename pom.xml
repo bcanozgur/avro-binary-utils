@@ -13,7 +13,7 @@
 
     <groupId>com.reddlyne</groupId>
     <artifactId>commons</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>commons</name>
 
     <properties>
@@ -103,8 +103,16 @@
                 </executions>
             </plugin>
         </plugins>
-
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/bcanozgur/avro-binary-utils</url>
+        </repository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>spring-milestones</id>
